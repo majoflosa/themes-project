@@ -7,7 +7,27 @@ h1, h2, h3, h4, h5, h6
     font-family: $headerFont
 
 a, a:active, a:visited
-    color: $primaryColor
+    color: $secondaryColor
+    text-decoration: none
+    +mainTransition
 a:hover
     text-decoration: underline
-    color: $lightPrimaryColor
+    color: $lightSecondaryColor
+
+.btn--primary
+    +mainBtn($primaryColor)
+
+.btn--primary-border
+    +borderBtn($primaryColor)
+
+.btn--neutral
+    +mainBtn($midGrey)
+
+.btn--neutral-border
+    +borderBtn($midGrey)
+
+.btn--danger
+    +mainBtn($secondaryColor)
+
+.btn--danger-border
+    +borderBtn($secondaryColor)

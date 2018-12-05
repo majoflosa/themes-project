@@ -1,0 +1,52 @@
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+//  GENERALS
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+=mainTransition($property: all, $duration: 0.25s, $timingFn: ease-in-out)
+    transition: $property $duration $timingFn
+    -webkit-transition: $property $duration $timingFn
+    -moz-transition: $property $duration $timingFn
+    -ms-transition: $property $duration $timingFn
+    -o-transition: $property $duration $timingFn
+
+=clearfix
+    display: block
+    content: " "
+    clear: both
+
+=mainFlex($justify: space-between)
+    display: flex
+    justify-content: $justify
+    align-items: center
+    flex-direction: row
+
+
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+//  BUTTONS
+// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+=btnGenerals
+    display: inline-block
+    padding: 8px 14px
+    text-transform: uppercase
+    cursor: pointer
+    +mainTransition
+
+=mainBtn($color: $primary, $radius: $boxRadius)
+    +btnGenerals
+    background: $color
+    color: #ffffff
+    border: 1px solid $color
+    border-radius: $radius
+    &:hover
+        background: lighten($color, 10%)
+        border-color: lighten($color, 10%)
+
+=borderBtn($color: $primary, $radius: $boxRadius)
+    +btnGenerals
+    background: transparent
+    color: $color
+    border: 1px solid $color
+    border-radius: $radius
+    &:hover
+        background: $color
+        color: #ffffff
