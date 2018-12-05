@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACA,MAAM,EAAE,CAAC;EACT,WAAW,ECCD,UAAU;EDApB,KAAK,ECOU,OAAO;;;ADL1B,sBAAsB;EAClB,WAAW,ECDF,UAAU;;;ADGvB,sBAAsB;EAClB,KAAK,ECeM,OAAO;;;ADdtB,OAAO;EACH,eAAe,EAAE,SAAS;EAC1B,KAAK,ECaW,OAA2B",
+"sources": ["sass/_generals.sass","sass/_vars.sass"],
+"names": [],
+"file": "style.css"
+}

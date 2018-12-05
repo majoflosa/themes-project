@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: #555555;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+}
+
+a, a:active, a:visited {
+  color: #5555ee;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #8383f3;
+}
+
+/*# sourceMappingURL=style.css.map */
