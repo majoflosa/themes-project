@@ -67,20 +67,72 @@
         </section>
         <hr>
         <section class="element-section">
-            <div class="form__item"><label for="">Text</label><input type="text" placeholder="This is a placeholder"></div>
-            <div class="form__item"><label for="">Password</label><input placeholder="This is a placeholder" type="password"></div>
-            <div class="form__item"><label for="">Email</label><input placeholder="This is a placeholder" type="email"></div>
-            <!-- <div class="form__item"><label for="">Date</label><input placeholder="This is a placeholder" type="date"></div><br> -->
-            <!-- <div class="form__item"><label for="">Search</label><input placeholder="This is a placeholder" type="search"></div><br> -->
-            <!-- <div class="form__item"><label for="">Url</label><input placeholder="This is a placeholder" type="url"></div><br> -->
-            <!-- <div class="form__item"><label for="">Tel</label><input placeholder="This is a placeholder" type="tel"></div><br> -->
-            <!-- <div class="form__item"><label for="">Number</label><input placeholder="This is a placeholder" type="number"></div><br> -->
-            <!-- <div class="form__item"><label for="">Datetime</label><input placeholder="This is a placeholder" type="datetime-local"></div><br> -->
-            <!-- <div class="form__item"><label for="">Time</label><input placeholder="This is a placeholder" type="time"></div><br> -->
-            <!-- <div class="form__item"><label for="">Week</label><input placeholder="This is a placeholder" type="week"></div><br> -->
-            <div class="form__item-block"><label for="">Textarea</label><textarea name="" id="" cols="30" rows="10"></textarea></div>
-            <div class="form__item"><label for="">Error</label><input class="error-field" type="text" placeholder="This is a placeholder"></div>
-            <div class="form__item"><label for="">Block</label><input class="block-field" type="text" placeholder="This is a placeholder"></div>
+            <div class="form__item one-third">
+                <label for="">Text</label>
+                <input type="text" placeholder="This is a placeholder">
+            </div>
+            <div class="form__item one-third">
+                <label for="">Password</label>
+                <input placeholder="This is a placeholder" type="password">
+            </div>
+            <div class="form__item one-third">
+                <label for="">Email</label>
+                <input placeholder="This is a placeholder" type="email">
+            </div>
+            <div class="form__item-block">
+                <label for="">Textarea</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="form__item">
+                <label for="">Error</label>
+                <input class="error-field" type="text" placeholder="This is a placeholder">
+            </div>
+            <div class="form__item-block">
+                <label for="">Select</label>
+                <select name="" id="">
+                    <option value=""> -- Select -- </option>
+                    <option value="lorem">Lorem ipsum dolor sit amet</option>
+                    <option value="ibsum">Ipsum</option>
+                    <option value="Dolor">Dolor</option>
+                    <option value="Amet">Amet</option>
+                </select>
+            </div>
+            <div class="form__item-block">
+                <label for="">Block Field</label>
+                <input class="block-field" type="text" placeholder="This is a placeholder">
+            </div>
+            <div class="form__item-block">
+                <label class="radio-label" for="radio1">
+                    <input type="radio" id="radio1" name="radio-fields"><span>Radio 1</span>
+                </label>
+                <label class="radio-label" for="radio2">
+                    <input type="radio" id="radio2" name="radio-fields"><span>Radio 2</span>
+                </label>
+                <label class="radio-label" for="radio3">
+                    <input type="radio" id="radio3" name="radio-fields"><span>Radio 3</span>
+                </label>
+            </div>
+            <div class="form__item-block">
+                <label class="checkbox-label" for="checkbox1">
+                    <input type="checkbox" id="checkbox1" name="checkbox-fields"><span>checkbox 1</span>
+                </label>
+                <label class="checkbox-label" for="checkbox2">
+                    <input type="checkbox" id="checkbox2" name="checkbox-fields"><span>checkbox 2</span>
+                </label>
+                <label class="checkbox-label" for="checkbox3">
+                    <input type="checkbox" id="checkbox3" name="checkbox-fields"><span>checkbox 3</span>
+                </label>
+            </div>
+            <div class="form__item-block">
+                <label class="file-label" for="file-upload">
+                    <input type="file" id="file-upload">
+                    <span>Upload File</span>
+                </label>
+                <label class="file-label--border" for="file-upload">
+                    <input type="file" id="file-upload">
+                    <span>Upload File</span>
+                </label>
+            </div>
         </section>
     </div>
 </body>

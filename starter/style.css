@@ -60,7 +60,8 @@ input[type="number"],
 input[type="datetime-local"],
 input[type="time"],
 input[type="week"],
-textarea {
+textarea,
+select {
   display: block;
   padding: 8px 12px;
   border-radius: 3px;
@@ -85,7 +86,8 @@ input[type="number"].block-field,
 input[type="datetime-local"].block-field,
 input[type="time"].block-field,
 input[type="week"].block-field,
-textarea.block-field {
+textarea.block-field,
+select.block-field {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -101,7 +103,8 @@ input[type="number"]:focus,
 input[type="datetime-local"]:focus,
 input[type="time"]:focus,
 input[type="week"]:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: none;
   border-color: #5555ee;
 }
@@ -116,7 +119,8 @@ input[type="number"].error-field,
 input[type="datetime-local"].error-field,
 input[type="time"].error-field,
 input[type="week"].error-field,
-textarea.error-field {
+textarea.error-field,
+select.error-field {
   border-color: #ee8877;
 }
 input[type="text"]::placeholder,
@@ -130,13 +134,126 @@ input[type="number"]::placeholder,
 input[type="datetime-local"]::placeholder,
 input[type="time"]::placeholder,
 input[type="week"]::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+select::placeholder {
   color: #d0d0d0;
 }
 
 textarea {
   width: 100%;
   box-sizing: border-box;
+}
+
+select {
+  height: 2.25em;
+  width: 100%;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+.radio-label {
+  display: inline-block;
+  cursor: pointer;
+}
+.radio-label input[type="radio"] {
+  display: inline-block;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+.radio-label input[type="radio"] + span::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 2px solid #aaaaaa;
+}
+.radio-label input[type="radio"]:checked + span::before {
+  background: #5555ee;
+  border-color: #5555ee;
+}
+
+.checkbox-label {
+  display: inline-block;
+  cursor: pointer;
+}
+.checkbox-label input[type="checkbox"] {
+  display: inline-block;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+.checkbox-label input[type="checkbox"] + span::before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 3px;
+  border: 2px solid #aaaaaa;
+}
+.checkbox-label input[type="checkbox"]:checked + span::before {
+  background: #5555ee;
+  border-color: #5555ee;
+}
+
+.file-label {
+  display: inline-block;
+  border: 1px solid #5555ee;
+  border-radius: 3px;
+  padding: 8px 14px;
+  background: #5555ee;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+.file-label input[type="file"] {
+  display: inline-block;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+.file-label:hover {
+  background: #8383f3;
+  border-color: #8383f3;
+}
+
+.file-label--border {
+  display: inline-block;
+  border: 1px solid #5555ee;
+  border-radius: 3px;
+  padding: 8px 14px;
+  background: transparent;
+  color: #5555ee;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+.file-label--border input[type="file"] {
+  display: inline-block;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+}
+.file-label--border:hover {
+  background: rgba(26, 26, 26, 0);
+  border-color: rgba(26, 26, 26, 0);
+}
+.file-label--border:hover {
+  background: #5555ee;
+  border-color: #5555ee;
+  color: #ffffff;
 }
 
 .btn--primary {
@@ -283,6 +400,30 @@ textarea {
 
 .no-margin-bottom {
   margin-bottom: 0 !important;
+}
+
+.half {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  margin-left: 0.9%;
+  margin-right: 0.9%;
+}
+
+.one-third {
+  display: inline-block;
+  vertical-align: top;
+  width: 31%;
+  margin-left: 0.9%;
+  margin-right: 0.9%;
+}
+
+.two-thirds {
+  display: inline-block;
+  vertical-align: top;
+  width: 64%;
+  margin-left: 0.9%;
+  margin-right: 0.9%;
 }
 
 .wrap {

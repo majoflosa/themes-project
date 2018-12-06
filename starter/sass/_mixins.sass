@@ -52,6 +52,42 @@
         color: #ffffff
 
 
+=formSelectors($radius: $boxRadius)
+    display: inline-block
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    & + span::before
+        display: inline-block
+        vertical-align: middle
+        content: " "
+        width: 20px
+        height: 20px
+        margin-right: 8px
+        border-radius: $radius
+        border: 2px solid $midGrey
+    &:checked + span::before
+        background: $primaryColor
+        border-color: $primaryColor
+
+=fileInput($bg: $primaryColor, $color: #ffffff, $border: $primaryColor)
+    display: inline-block
+    border: 1px solid $border
+    border-radius: $boxRadius
+    padding: 8px 14px
+    background: $bg
+    color: $color
+    cursor: pointer
+    +mainTransition
+    input[type="file"]
+        display: inline-block
+        width: 0.1px
+        height: 0.1px
+        opacity: 0
+    &:hover
+        background: lighten($bg, 10%)
+        border-color: lighten($bg, 10%)
+
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 //  MODALS
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
