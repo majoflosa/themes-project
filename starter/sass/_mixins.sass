@@ -1,7 +1,6 @@
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 //  GENERALS
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
 =mainTransition($property: all, $duration: 0.25s, $timingFn: ease-in-out)
     transition: $property $duration $timingFn
     -webkit-transition: $property $duration $timingFn
@@ -22,30 +21,32 @@
 
 
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-//  BUTTONS
+//  BUTTONS, CHECKBOX, RADIO, AND FILE INPUT
 // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 =btnGenerals
     display: inline-block
     padding: 8px 14px
     text-transform: uppercase
+    border: 1px solid
     cursor: pointer
+    font-size: inherit
     +mainTransition
 
-=mainBtn($color: $primary, $radius: $boxRadius)
+=mainBtn($color: $primaryColor, $radius: $boxRadius)
     +btnGenerals
     background: $color
     color: #ffffff
-    border: 1px solid $color
+    border-color: $color
     border-radius: $radius
     &:hover
         background: lighten($color, 10%)
         border-color: lighten($color, 10%)
 
-=borderBtn($color: $primary, $radius: $boxRadius)
+=borderBtn($color: $primaryColor, $radius: $boxRadius)
     +btnGenerals
     background: transparent
     color: $color
-    border: 1px solid $color
+    border-color: $color
     border-radius: $radius
     &:hover
         background: $color
@@ -67,18 +68,15 @@
         border-radius: $radius
         border: 2px solid $midGrey
     &:checked + span::before
-        background: $primaryColor
-        border-color: $primaryColor
+        background: $secondaryColor
+        border-color: $secondaryColor
 
-=fileInput($bg: $primaryColor, $color: #ffffff, $border: $primaryColor)
-    display: inline-block
-    border: 1px solid $border
+=fileInput($bg: $secondaryColor, $color: #ffffff, $border: $secondaryColor)
+    +btnGenerals
+    border-color: $border
     border-radius: $boxRadius
-    padding: 8px 14px
     background: $bg
     color: $color
-    cursor: pointer
-    +mainTransition
     input[type="file"]
         display: inline-block
         width: 0.1px

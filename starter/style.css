@@ -172,8 +172,8 @@ select {
   border: 2px solid #aaaaaa;
 }
 .radio-label input[type="radio"]:checked + span::before {
-  background: #5555ee;
-  border-color: #5555ee;
+  background: #ee8877;
+  border-color: #ee8877;
 }
 
 .checkbox-label {
@@ -197,23 +197,26 @@ select {
   border: 2px solid #aaaaaa;
 }
 .checkbox-label input[type="checkbox"]:checked + span::before {
-  background: #5555ee;
-  border-color: #5555ee;
+  background: #ee8877;
+  border-color: #ee8877;
 }
 
 .file-label {
   display: inline-block;
-  border: 1px solid #5555ee;
-  border-radius: 3px;
   padding: 8px 14px;
-  background: #5555ee;
-  color: #ffffff;
+  text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
+  border-color: #ee8877;
+  border-radius: 3px;
+  background: #ee8877;
+  color: #ffffff;
 }
 .file-label input[type="file"] {
   display: inline-block;
@@ -222,23 +225,26 @@ select {
   opacity: 0;
 }
 .file-label:hover {
-  background: #8383f3;
-  border-color: #8383f3;
+  background: #f4b0a4;
+  border-color: #f4b0a4;
 }
 
 .file-label--border {
   display: inline-block;
-  border: 1px solid #5555ee;
-  border-radius: 3px;
   padding: 8px 14px;
-  background: transparent;
-  color: #5555ee;
+  text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
+  border-color: #ee8877;
+  border-radius: 3px;
+  background: transparent;
+  color: #ee8877;
 }
 .file-label--border input[type="file"] {
   display: inline-block;
@@ -251,16 +257,18 @@ select {
   border-color: rgba(26, 26, 26, 0);
 }
 .file-label--border:hover {
-  background: #5555ee;
-  border-color: #5555ee;
+  background: #ee8877;
+  border-color: #ee8877;
   color: #ffffff;
 }
 
-.btn--primary {
+input[type="button"], input[type="submit"] {
   display: inline-block;
   padding: 8px 14px;
   text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -268,7 +276,117 @@ select {
   -o-transition: all 0.25s ease-in-out;
   background: #5555ee;
   color: #ffffff;
-  border: 1px solid #5555ee;
+  border-color: #5555ee;
+  border-radius: 3px;
+}
+input[type="button"]:hover, input[type="submit"]:hover {
+  background: #8383f3;
+  border-color: #8383f3;
+}
+
+input[type="button"].primary-border {
+  display: inline-block;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: inherit;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  background: transparent;
+  color: #5555ee;
+  border-color: #5555ee;
+  border-radius: 3px;
+}
+input[type="button"].primary-border:hover {
+  background: #5555ee;
+  color: #ffffff;
+}
+
+input[type="button"].secondary {
+  display: inline-block;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: inherit;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  background: #ee8877;
+  color: #ffffff;
+  border-color: #ee8877;
+  border-radius: 3px;
+}
+input[type="button"].secondary:hover {
+  background: #f4b0a4;
+  border-color: #f4b0a4;
+}
+
+input[type="button"].secondary-border {
+  display: inline-block;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: inherit;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  background: transparent;
+  color: #ee8877;
+  border-color: #ee8877;
+  border-radius: 3px;
+}
+input[type="button"].secondary-border:hover {
+  background: #ee8877;
+  color: #ffffff;
+}
+
+input[type="reset"] {
+  display: inline-block;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: inherit;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  background: transparent;
+  color: #aaaaaa;
+  border-color: #aaaaaa;
+  border-radius: 3px;
+}
+input[type="reset"]:hover {
+  background: #aaaaaa;
+  color: #ffffff;
+}
+
+.btn--primary {
+  display: inline-block;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: inherit;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  background: #5555ee;
+  color: #ffffff;
+  border-color: #5555ee;
   border-radius: 3px;
 }
 .btn--primary:hover {
@@ -280,7 +398,9 @@ select {
   display: inline-block;
   padding: 8px 14px;
   text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -288,7 +408,7 @@ select {
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
   color: #5555ee;
-  border: 1px solid #5555ee;
+  border-color: #5555ee;
   border-radius: 3px;
 }
 .btn--primary-border:hover {
@@ -300,7 +420,9 @@ select {
   display: inline-block;
   padding: 8px 14px;
   text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -308,7 +430,7 @@ select {
   -o-transition: all 0.25s ease-in-out;
   background: #aaaaaa;
   color: #ffffff;
-  border: 1px solid #aaaaaa;
+  border-color: #aaaaaa;
   border-radius: 3px;
 }
 .btn--neutral:hover {
@@ -320,7 +442,9 @@ select {
   display: inline-block;
   padding: 8px 14px;
   text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -328,7 +452,7 @@ select {
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
   color: #aaaaaa;
-  border: 1px solid #aaaaaa;
+  border-color: #aaaaaa;
   border-radius: 3px;
 }
 .btn--neutral-border:hover {
@@ -340,7 +464,9 @@ select {
   display: inline-block;
   padding: 8px 14px;
   text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -348,7 +474,7 @@ select {
   -o-transition: all 0.25s ease-in-out;
   background: #ee8877;
   color: #ffffff;
-  border: 1px solid #ee8877;
+  border-color: #ee8877;
   border-radius: 3px;
 }
 .btn--danger:hover {
@@ -360,7 +486,9 @@ select {
   display: inline-block;
   padding: 8px 14px;
   text-transform: uppercase;
+  border: 1px solid;
   cursor: pointer;
+  font-size: inherit;
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -368,7 +496,7 @@ select {
   -o-transition: all 0.25s ease-in-out;
   background: transparent;
   color: #ee8877;
-  border: 1px solid #ee8877;
+  border-color: #ee8877;
   border-radius: 3px;
 }
 .btn--danger-border:hover {

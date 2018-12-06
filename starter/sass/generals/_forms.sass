@@ -69,8 +69,23 @@ select
     +fileInput
 
 .file-label--border
-    +fileInput(transparent, $primaryColor)
+    +fileInput(transparent, $secondaryColor)
     &:hover
-        background: $primaryColor
-        border-color: $primaryColor
+        background: $secondaryColor
+        border-color: $secondaryColor
         color: #ffffff
+
+input[type="button"], input[type="submit"]
+    +mainBtn
+
+input[type="button"].primary-border
+    +borderBtn($primaryColor)
+
+input[type="button"].secondary
+    +mainBtn($secondaryColor)
+
+input[type="button"].secondary-border
+    +borderBtn($secondaryColor)
+
+input[type="reset"]
+    +borderBtn($midGrey)
