@@ -1,0 +1,47 @@
+.form__item
+    display: inline-block
+    margin: 0 10px 20px 0
+
+.form__item-block
+    display: block
+    margin: 0 10px 20px 0
+
+label
+    display: block
+    margin: 0 0 5px
+
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+input[type="search"], 
+input[type="date"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="datetime-local"], 
+input[type="time"], 
+input[type="week"], 
+textarea
+    display: block
+    padding: 8px 12px 
+    border-radius: $boxRadius
+    border: 1px solid $midGrey
+    color: inherit
+    font-family: inherit
+    font-size: inherit
+    +mainTransition
+    &.block-field
+        display: block
+        width: 100%
+        box-sizing: border-box
+    &:focus
+        outline: none
+        border-color: $primaryColor
+    &.error-field
+        border-color: $secondaryColor
+    &::placeholder
+        color: lighten($midGrey, 15%)
+
+textarea
+    width: 100%
+    box-sizing: border-box

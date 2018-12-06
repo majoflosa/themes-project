@@ -1,0 +1,20 @@
+body
+    margin: 0
+    font-family: $primaryFont
+    color: $primaryFontColor
+
+h1, h2, h3, h4, h5, h6
+    font-family: $headerFont
+
+a, a:active, a:visited
+    color: $secondaryColor
+    text-decoration: none
+    +mainTransition
+a:hover
+    text-decoration: underline
+    color: $lightSecondaryColor
+
+
+
+.modal-wrap
+    +outerModal
