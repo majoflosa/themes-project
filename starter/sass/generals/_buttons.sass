@@ -1,20 +1,34 @@
 .btn--primary
     +mainBtn($primaryColor)
-
 .btn--primary-border
     +borderBtn($primaryColor)
 
 .btn--neutral
     +mainBtn($midGrey)
-
 .btn--neutral-border
     +borderBtn($midGrey)
 
 .btn--danger
     +mainBtn($secondaryColor)
-
 .btn--danger-border
     +borderBtn($secondaryColor)
+
+.btn--primary-disabled,
+.btn--neutral-disabled,
+.btn--danger-disabled
+    +mainBtn(lighten($midGrey, 22%))
+    cursor: initial
+    &:hover
+        background: lighten($midGrey, 22%)
+        border-color: lighten($midGrey, 22%)
+.btn--primary-border-disabled,
+.btn--neutral-border-disabled,
+.btn--danger-border-disabled
+    +borderBtn(lighten($midGrey, 22%))
+    cursor: initial
+    &:hover
+        background: transparent
+        color: lighten($midGrey, 22%)
 
 .block-btn
     display: block
