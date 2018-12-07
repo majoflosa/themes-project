@@ -9,6 +9,6 @@ An initial template to serve as boilerplate for other themes
 * `index.html` contains a reference of all styled elements to be targeted by the themes
 * `/ui-components` contains ui components with their respective scripts and styles
     * `banner.html` - a "hero banner" section with full-width background image; no javascript
-    * `basic-plx.html` - a section with background image and vertical parallax effect on scroll; vanilla javascript
-    * `layered-plx.html` - a section with more than one layers of background parallax effect on scroll
+    * `basic-plx.html` - a section with background image and vertical parallax effect on scroll; vanilla ES6
+    * `layered-plx.html` - a section with more than one layers of background parallax effect on scroll; vanilla ES6
 * `/js` contains scripts for ui components
