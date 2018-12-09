@@ -60,7 +60,7 @@ window.onload = function() {
     const layers = layerElements.map( (layerElement, index) => {
         let layerObj = {
             element: layerElement,
-            initialTop: 500,
+            initialTop: 600,
             scrollRatio: 0.5
         };
 
@@ -68,9 +68,9 @@ window.onload = function() {
     });
 
     // manually override individual initial position and scroll speed ratio
-    layers[1].initialTop = 700;
+    layers[1].initialTop = 800;
     layers[1].scrollRatio = 0.95;
-    layers[2].initialTop = 1000;
+    layers[2].initialTop = 1100;
     layers[2].scrollRatio = 1.5;
 
     // initiate the component

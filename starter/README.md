@@ -11,4 +11,5 @@ An initial template to serve as boilerplate for other themes
     * `banner.html` - a "hero banner" section with full-width background image; no javascript
     * `basic-plx.html` - a section with background image and vertical parallax effect on scroll; vanilla ES6
     * `layered-plx.html` - a section with more than one layers of background parallax effect on scroll; vanilla ES6
+    * `multiple-plx.html` - a section with more than one banner sections of background parallax effect on scroll; vanilla ES6
 * `/js` contains scripts for ui components
