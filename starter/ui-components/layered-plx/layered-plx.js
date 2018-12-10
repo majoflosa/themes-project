@@ -2,6 +2,7 @@ window.onload = function() {
 
     class LayeredPlxBanner {
         constructor(elements) {
+            // the collection of selectors and elements that will have parallax effect
             this.elements = elements;
 
             // the element that wraps content and parallaxed background
@@ -39,7 +40,7 @@ window.onload = function() {
         }
 
         bindEvents() {
-            window.addEventListener( 'scroll', this.parallax.bind(this) );
+            window.addEventListener( 'scroll', this.parallax );
         }
 
         /**

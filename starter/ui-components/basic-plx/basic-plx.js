@@ -37,7 +37,7 @@ window.onload = function() {
         }
 
         bindEvents() {
-            window.addEventListener( 'scroll', this.parallax.bind(this) );
+            window.addEventListener( 'scroll', this.parallax );
         }
 
         /**

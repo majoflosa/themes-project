@@ -945,6 +945,10 @@ input[type="reset"]:hover {
   background-attachment: fixed;
 }
 
+#banner-4 {
+  background-image: url("https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1400");
+}
+
 .wrap {
   width: 90%;
   max-width: 900px;
