@@ -1,6 +1,11 @@
-window.onload = function() {
+window.addEventListener('load', () => {
 
     class LayeredPlxBanner {
+        /**
+         * 
+         * @param {object} elements object containing css selectors for parallax banner wrapper, background image, and
+         * array of layers
+         */
         constructor(elements) {
             // the collection of selectors and elements that will have parallax effect
             this.elements = elements;
@@ -47,7 +52,9 @@ window.onload = function() {
          * Calculate and set new `top` value for banner image and layers based on window scroll position
          */
         parallax() {
+            // calculate amount of px to shift background element's position and set to `top` property
             this.$bannerBg.style.top = this.initialBannerTop - (window.scrollY * 0.15) + 'px';
+            // calculate amount of px to shift each layer element and set to `top` property
             this.elements.layers.forEach( layer => {
                 layer.element.style.top = layer.initialTop - (window.scrollY * layer.scrollRatio ) + 'px';
             });
@@ -76,10 +83,10 @@ window.onload = function() {
 
     // initiate the component
     const layeredPlxBanner = new LayeredPlxBanner({
-        banner: '.hero-banner', 
-        layers: layers,
-        plxBackground: '.plx-background', 
-        plxBackgroundImg: '.plx-background-img'
+        banner: '.hero-banner', // css selector for wrapping element of parallax banner
+        plxBackground: '.plx-background', // css selector for element containing background image
+        plxBackgroundImg: '.plx-background-img', // css selector for background imag
+        layers: layers // array of objects containing layer DOM elements and their initial settings
     });
 
-}
+});

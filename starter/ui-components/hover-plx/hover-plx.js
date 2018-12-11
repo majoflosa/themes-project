@@ -1,6 +1,12 @@
 window.addEventListener('load', () => {
 
     class HoverPlx {
+        /**
+         * 
+         * @param { string } bannerSelector css selector for wrapping parallax element
+         * @param { string } backgroundSelector css selector for element wrapping background image
+         * @param { string } contentSelector css selector for element wrapping banner content
+         */
         constructor( bannerSelector, backgroundSelector, contentSelector ) {
             // the element that wraps content and parallaxed background
             this.$banner = document.querySelector( bannerSelector );

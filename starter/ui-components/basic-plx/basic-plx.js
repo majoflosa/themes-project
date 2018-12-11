@@ -1,6 +1,12 @@
-window.onload = function() {
+window.addEventListener('load', () => {
     
     class BasicPlxBanner {
+        /**
+         * 
+         * @param {string } bannerSelector css selector for main wrapping element
+         * @param { string } backgroundElementSelector css selector for element wrapping background img
+         * @param { string } backgroundImageSelector css selector for background img
+         */
         constructor(bannerSelector, backgroundElementSelector, backgroundImageSelector) {
             // the element that wraps content and parallaxed background
             this.$banner = document.querySelector( bannerSelector );
@@ -51,5 +57,4 @@ window.onload = function() {
     // initiate the component
     const plxBanner = new BasicPlxBanner( '.hero-banner', '.plx-background', '.plx-background-img');
 
-};
-
+});
