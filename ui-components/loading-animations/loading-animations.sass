@@ -63,21 +63,21 @@
             transform: translate(0, -10px)
     .spinner-2
         left: 50px
-        animation-delay: 0.3s
+        animation-delay: 0.25s
         .dot
             transform: translate(0, -10px)
     .spinner-3
-        animation-delay: 0.6s
+        animation-delay: 0.5s
         .dot
             transform: translate(0, -10px)
     .spinner-4
         right: 50px
-        animation-delay: 0.9s
+        animation-delay: 0.75s
         .dot
             transform: translate(0, -10px)
     .spinner-5
         right: 100px
-        animation-delay: 1.2s
+        animation-delay: 1s
         .dot
             transform: translate(0, -10px)
 
@@ -93,9 +93,9 @@
 @keyframes momentumSpin
     0%
         transform: rotate(0)
-    70%
+    65%
         transform: rotate(355deg)
-    80%
+    75%
         transform: rotate(360deg)
     100%
         transform: rotate(360deg)
@@ -257,6 +257,86 @@
     100%
         transform: rotate(30deg)
 
+
+/* = = = = = = = = = = = = Glaring bar = = = = = = = = = = = = */
+$glareWidth: 50%
+#glare-bar
+    margin: 30px auto
+    width: 150px
+    height: 6px
+    border-radius: 3px
+    background: #e5e5e5
+    position: relative
+    overflow: hidden
+
+    .glare
+        position: absolute
+        top: 0
+        left: - $glareWidth
+        width: $glareWidth
+        height: 100%
+        background-image: linear-gradient(to right, transparent, #fafafa, transparent)
+        animation-name: glareSlide
+        animation-duration: 2.75s
+        animation-iteration-count: infinite
+        animation-timing-function: ease-in-out
+    .glare-2
+        animation-delay: 0.5s
+
+@keyframes glareSlide
+    0%
+        left: - $glareWidth
+    25%
+        left: 100%
+    100%
+        left: 100%
+
+
+/* = = = = = = = = = = = = Glaring bar with ending = = = = = = = = = = = = */
+$glareWidth: 50%
+#glare-bar-ending
+    margin: 30px auto
+    width: 150px
+    height: 6px
+    border-radius: 3px
+    background: #e5e5e5
+    position: relative
+    overflow: hidden
+    animation-name: pageLoaded
+    animation-duration: 1.25s
+    animation-iteration-count: 1
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+    /* animation-delay is just to simulate loading time; remove in production */
+    animation-delay: 4s 
+
+    .glare
+        position: absolute
+        top: 0
+        left: - $glareWidth
+        width: $glareWidth
+        height: 100%
+        background-image: linear-gradient(to right, transparent, #fafafa, transparent)
+        animation-name: glareSlide
+        animation-duration: 2.75s
+        animation-iteration-count: infinite
+        animation-timing-function: ease-in-out
+    .glare-2
+        animation-delay: 0.5s
+
+@keyframes pageLoaded
+    0%
+        height: 6px
+        width: 150px
+        opacity: 1
+    70%
+        height: 0px
+        width: 70%
+        opacity: 0
+    100%
+        height: 0px
+        width: 70%
+        opacity: 0
 
 /* General styles not directly related to animated components */
 body
