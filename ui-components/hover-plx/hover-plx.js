@@ -7,13 +7,13 @@ window.addEventListener('load', () => {
          * @param { string } backgroundSelector css selector for element wrapping background image
          * @param { string } contentSelector css selector for element wrapping banner content
          */
-        constructor( bannerSelector, backgroundSelector, contentSelector ) {
+        constructor( selectors ) {
             // the element that wraps content and parallaxed background
-            this.$banner = document.querySelector( bannerSelector );
+            this.$banner = document.querySelector( selectors.bannerSelector );
             // the element containing the image to use as background for the banner
-            this.$plxBackground = document.querySelector( backgroundSelector );
+            this.$plxBackground = document.querySelector( selectors.backgroundSelector );
             // the element containing the content of the banner
-            this.$content = this.$banner.querySelector( contentSelector );
+            this.$content = this.$banner.querySelector( selectors.contentSelector );
 
             // max distance in px the content can move from its original position
             this.contentPlxRange = 10;
@@ -84,6 +84,10 @@ window.addEventListener('load', () => {
     }
 
     // instantiate the component
-    const hoverPlx = new HoverPlx( '.hero-banner', '.plx-background', '.hero-banner__content' );
+    const hoverPlx = new HoverPlx({
+        bannerSelector: '.hero-banner',
+        backgroundSelector: '.plx-background',
+        contentSelector: '.hero-banner__content'
+    });
 
 });

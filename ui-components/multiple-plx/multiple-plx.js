@@ -8,16 +8,16 @@ window.addEventListener('load', () => {
          * @param { string } backgroundImageSelector css selector for background image
          * @param { number } scrollRatio proportion of how many pixels to shift background to pixels scrolled
          */
-        constructor(bannerSelector, backgroundElementSelector, backgroundImageSelector, scrollRatio = 0.15) {
+        constructor( selectors ) {
             // the element that wraps content and parallaxed background
-            this.$banner = document.querySelector( bannerSelector );
+            this.$banner = document.querySelector( selectors.bannerSelector );
             // the element containing the image to use as background for the banner
-            this.$bannerBg = this.$banner.querySelector( backgroundElementSelector );
+            this.$bannerBg = this.$banner.querySelector( selectors.backgroundSelector );
 
             // the height of the wrapper element
             this.bannerHt = this.$banner.offsetHeight;
             // the height of the image used as background
-            this.bannerBgHt = this.$bannerBg.querySelector( backgroundImageSelector ).offsetHeight;
+            this.bannerBgHt = this.$bannerBg.querySelector( selectors.backgroundImageSelector ).offsetHeight;
 
             // value to use for `top` css property on image used as background;
             // if the banner is full-screen height, set to 0; else, center vertically
@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
                 ? 0 
                 : -(this.bannerBgHt - this.bannerHt) / 2;
 
-            this.scrollRatio = scrollRatio;
+            this.scrollRatio = selectors.scrollRatio;
             
             // bind context of all class methods to the created instance object
             this.init = this.init.bind( this );
@@ -86,7 +86,21 @@ window.addEventListener('load', () => {
     }
 
     // initiate the component
-    const plxBanner = new MultiplePlxBanner( '#banner-1', '.plx-background', '.plx-background-img');
-    const plxBanner2 = new MultiplePlxBanner( '#banner-3', '.plx-background', '.plx-background-img', 0.25);
+    // const plxBanner = new MultiplePlxBanner( '#banner-1', '.plx-background', '.plx-background-img');
+    // const plxBanner2 = new MultiplePlxBanner( '#banner-3', '.plx-background', '.plx-background-img', 0.25);
+    // bannerSelector, backgroundElementSelector, backgroundImageSelector, scrollRatio = 0.15
+    const plxBanner = new MultiplePlxBanner({
+        bannerSelector: '#banner-1', 
+        backgroundSelector: '.plx-background', 
+        backgroundImageSelector: '.plx-background-img',
+        scrollRatio: 0.15 // 0.15 is the default value
+    });
+
+    const plxBanner2 = new MultiplePlxBanner({
+        bannerSelector: '#banner-3', 
+        backgroundSelector: '.plx-background', 
+        backgroundImageSelector: '.plx-background-img', 
+        scrollRatio: 0.25
+    });
 
 });

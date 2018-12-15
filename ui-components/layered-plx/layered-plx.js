@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
          * @param {object} elements object containing css selectors for parallax banner wrapper, background image, and
          * array of layers
          */
-        constructor(elements) {
+        constructor( elements ) {
             // the collection of selectors and elements that will have parallax effect
             this.elements = elements;
 

@@ -7,16 +7,16 @@ window.addEventListener('load', () => {
          * @param { string } backgroundElementSelector css selector for element wrapping background img
          * @param { string } backgroundImageSelector css selector for background img
          */
-        constructor(bannerSelector, backgroundElementSelector, backgroundImageSelector) {
+        constructor( selectors ) {
             // the element that wraps content and parallaxed background
-            this.$banner = document.querySelector( bannerSelector );
+            this.$banner = document.querySelector( selectors.bannerSelector );
             // the element containing the image to use as background for the banner
-            this.$bannerBg = this.$banner.querySelector( backgroundElementSelector );
+            this.$bannerBg = this.$banner.querySelector( selectors.backgroundSelector );
 
             // the height of the wrapper element
             this.bannerHt = this.$banner.offsetHeight;
             // the height of the image used as background
-            this.bannerBgHt = this.$bannerBg.querySelector( backgroundImageSelector ).offsetHeight;
+            this.bannerBgHt = this.$bannerBg.querySelector( selectors.backgroundImageSelector ).offsetHeight;
 
             // value to use for `top` css property on image used as background;
             // if the banner is full-screen height, set to 0; else, center vertically
@@ -55,6 +55,10 @@ window.addEventListener('load', () => {
     }
 
     // initiate the component
-    const plxBanner = new BasicPlxBanner( '.hero-banner', '.plx-background', '.plx-background-img');
+    const plxBanner = new BasicPlxBanner( {
+        bannerSelector: '.hero-banner',
+        backgroundSelector: '.plx-background', 
+        backgroundImageSelector: '.plx-background-img'} 
+    );
 
 });
