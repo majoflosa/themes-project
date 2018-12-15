@@ -20,5 +20,14 @@ body {
   padding: 60px;
   text-align: center;
 }
+.content-section div {
+  display: inline-block;
+  vertical-align: top;
+  width: 31%;
+  margin: 0 1%;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #eeeeee;
+}
 
-/*# sourceMappingURL=fade-in-onscroll.css.map */
+/*# sourceMappingURL=fade-in-onscroll-multiple.css.map */
