@@ -14,3 +14,5 @@ A collection of small, re-usable components of common web UI features.
 
 * **Fade In Content on Scroll** - [Live demo](http://ui.maurojflores.com/components/fade-in/)
 * **Successively Fade In Content on Scroll** - [Live demo](http://ui.maurojflores.com/components/fade-in-multiple/)
+
+* **Page with Scrollspy Menu** - [Live demo](http://ui.maurojflores.com/components/scrollspy/)
