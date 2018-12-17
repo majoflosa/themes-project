@@ -33,8 +33,6 @@ window.addEventListener('load', () => {
         init() {
             // make fade-in content invisible
             this.$element.style.opacity = 0;
-            // calculate height above animated element, based on height of its sibling elements before it
-            this.getHeightAboveElement();
 
             // bind relevant events
             this.bindEvents();
@@ -55,7 +53,7 @@ window.addEventListener('load', () => {
             if ( this.contentDisplayed ) return false;
 
             // check if enough has been scrolled to bring animated content into view
-            if ( this.heightAboveElement - window.innerHeight + (this.elementHt * 0.5) <= window.scrollY ) {
+            if ( this.$element.offsetTop - window.innerHeight + (this.elementHt * 0.5) <= window.scrollY ) {
                 // make note that animation has now played
                 this.contentDisplayed = true;
 
@@ -69,18 +67,6 @@ window.addEventListener('load', () => {
             }
         }
 
-        /**
-         * calculate height above animated element, based on height of its sibling elements before it
-         */
-        getHeightAboveElement() {
-            const siblings = [...this.$element.parentElement.children];
-            const elementIndex = siblings.indexOf( this.$element );
-
-            this.heightAboveElement = 0;
-            for ( let i = elementIndex - 1; i >= 0; i-- ) {
-                this.heightAboveElement += siblings[i].offsetHeight;
-            }
-        }
     }
 
     // instantiate the component
