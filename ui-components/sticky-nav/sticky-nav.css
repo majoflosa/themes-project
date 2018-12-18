@@ -3,13 +3,17 @@
   color: #ffffff;
   padding: 40px;
   box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+}
+#sticky-nav.sticky {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  transition: all 0.25s ease-in-out;
-}
-#sticky-nav.sticky {
   padding-top: 25px;
   padding-bottom: 25px;
   background: rgba(85, 85, 85, 0.7);

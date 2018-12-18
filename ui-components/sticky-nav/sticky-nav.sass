@@ -5,19 +5,24 @@ $navBackgroundColor: #555555
     color: #ffffff
     padding: 40px
     box-sizing: border-box
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
     transition: all 0.25s ease-in-out
+    -webkit-transition: all 0.25s ease-in-out
+    -moz-transition: all 0.25s ease-in-out
+    -ms-transition: all 0.25s ease-in-out
+    -o-transition: all 0.25s ease-in-out
 
     &.sticky
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
         padding-top: 25px
         padding-bottom: 25px
         background: rgba($navBackgroundColor, 0.7)
     
     a
         color: #ffffff
+
 
 .section
     background: #ffffff
@@ -35,4 +40,3 @@ $navBackgroundColor: #555555
 body
     margin: 0
     font-family: sans-serif
-    
