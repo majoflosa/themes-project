@@ -26,18 +26,31 @@ body {
   cursor: pointer;
 }
 
-.splash-right .splash-content {
+.splash .splash-content {
   position: relative;
-  text-align: left;
+  display: flex;
+  flex-direction: row-reverse;
   width: 90%;
-  max-width: 600px;
-  margin: 0 10% 0 auto;
+  margin: 0 auto;
+}
+.splash .splash-content div {
+  width: 47%;
+  margin: 0 1%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.splash .splash-content-left {
+  text-align: center;
+}
+.splash .splash-content-right {
+  text-align: left;
 }
 
 .splash-title {
   text-transform: uppercase;
   font-size: 2em;
   font-size: 2rem;
+  margin-top: 0;
 }
 
 .splash-tagline {

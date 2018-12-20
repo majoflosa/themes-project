@@ -24,18 +24,28 @@ body
         margin: 0 0 15px
         cursor: pointer
 
-.splash-right
+.splash
     .splash-content
         position: relative
-        text-align: left
+        display: flex
+        flex-direction: row-reverse
         width: 90%
-        max-width: 600px
-        margin: 0 10% 0 auto
+        margin: 0 auto
+        div
+            width: 47%
+            margin: 0 1%
+            display: inline-block
+            box-sizing: border-box
+        &-left
+            text-align: center
+        &-right
+            text-align: left
 
 .splash-title
     text-transform: uppercase
     font-size: 2em
     font-size: 2rem
+    margin-top: 0
 
 .splash-tagline
     font-weight: normal

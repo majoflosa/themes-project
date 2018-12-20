@@ -1,5 +1,6 @@
 $themeColor: #dddddd
 $fontColor: #555555
+
 body
     margin: 0
     font-family: sans-serif
@@ -10,7 +11,6 @@ body
     background: $themeColor
     min-height: 90vh
     display: flex
-    flex-direction: column
     justify-content: center
     align-items: center
 
@@ -24,18 +24,27 @@ body
         margin: 0 0 15px
         cursor: pointer
 
-.splash-left
+.splash
     .splash-content
         position: relative
-        text-align: right
+        display: flex
         width: 90%
-        max-width: 600px
-        margin: 0 auto 0 10%
+        margin: 0 auto
+        div
+            width: 47%
+            margin: 0 1%
+            display: inline-block
+            box-sizing: border-box
+        &-left
+            text-align: right
+        &-right
+            text-align: center
 
 .splash-title
     text-transform: uppercase
     font-size: 2em
     font-size: 2rem
+    margin-top: 0
 
 .splash-tagline
     font-weight: normal
